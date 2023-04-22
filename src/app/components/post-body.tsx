@@ -12,6 +12,7 @@ const PostBody = ({ content }: Props) => {
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </div>
+    
   )
 }
 

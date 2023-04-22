@@ -1,6 +1,7 @@
 import Avatar from './avatar'
 import CoverImage from './cover-image'
 import Link from 'next/link'
+import SectionSeparator from './section-separator'
 
 type Props = {
   title: string
@@ -31,6 +32,7 @@ const PostPreview = ({
         </Link>
       </h3>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
+      <SectionSeparator/>
     </>
   )
 }

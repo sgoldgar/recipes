@@ -89,7 +89,7 @@ body {
 
 body {
   color: #3E5066;
-  background: #EDECEE;
+  background: #f8f6f9;
   font-family: 'DM Sans';
 }
 
@@ -106,20 +106,30 @@ a {
 
 .container {
   padding-top: 3%;
-  padding-left: 10%;
+  padding-left: 8%;
 }
 
 .header {
-  padding-left: 10%;
+  padding-left: 8%;
   font-family: 'La Belle Aurore';
 }
 
 .home h1 {
   font-family: 'La Belle Aurore';
   font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.separator {
+    border: none;
+    border-top: 3px dotted #eaca47;
+    height: 10px;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .post-link {
+  margin-top: 10px;
   color: #89A18A;
   font-weight: bolder;
   font-style: italic;
@@ -128,13 +138,41 @@ a {
 }
 
 .decorator {
-  height: 100vh;
-  width: 50px;
-  background-color: #eedea1;
+  height: 100%;
+  width: 25px;
+  background-color: #eaca47;
   position: absolute;
   -webkit-mask: var(--mask);
         mask: var(--mask);
   --mask: 
-      linear-gradient(to left,#0000 25px,#000 0),
-      radial-gradient(25px,#000 98%,#0000) left/50px 46.25px;
+      linear-gradient(to right,#0000 25px,#000 0),
+      radial-gradient(25px,#000 98%,#0000) right/50px 46.25px;
+}
+
+.post h1 {
+  margin: 10px 0;
+  font-family: 'La Belle Aurore';
+  text-decoration: underline;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.post h3 {
+  margin-top: 30px;
+}
+
+.post p {
+  margin: 10px 0;
+}
+
+.post ul, .post ol {
+  margin: 20px 1em;
+}
+
+.post ul li {
+  margin-top: 5px;
+}
+
+.post ol li {
+  margin-top: 10px;
 }
