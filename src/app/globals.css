@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=La+Belle+Aurore&display=swap');
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+  /* --font-mono: 'Handlee', ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace; */
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -40,7 +42,7 @@
   --card-border-rgb: 131, 134, 135;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -71,7 +73,7 @@
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
   }
-}
+} */
 
 * {
   box-sizing: border-box;
@@ -86,22 +88,53 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #3E5066;
+  background: #EDECEE;
+  font-family: 'DM Sans';
 }
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+} */
+
+.container {
+  padding-top: 3%;
+  padding-left: 10%;
+}
+
+.header {
+  padding-left: 10%;
+  font-family: 'La Belle Aurore';
+}
+
+.home h1 {
+  font-family: 'La Belle Aurore';
+  font-size: 48px;
+}
+
+.post-link {
+  color: #89A18A;
+  font-weight: bolder;
+  font-style: italic;
+  font-family: 'La Belle Aurore';
+  font-size: 32px;
+}
+
+.decorator {
+  height: 100vh;
+  width: 50px;
+  background-color: #eedea1;
+  position: absolute;
+  -webkit-mask: var(--mask);
+        mask: var(--mask);
+  --mask: 
+      linear-gradient(to left,#0000 25px,#000 0),
+      radial-gradient(25px,#000 98%,#0000) left/50px 46.25px;
 }
