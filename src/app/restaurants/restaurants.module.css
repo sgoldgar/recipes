@@ -1,0 +1,30 @@
+.restaurant {
+    margin-bottom: 20px;
+}
+
+.restaurantTags {
+    display: flex;
+}
+
+.restaurantTags p {
+    margin: 5px 5px 5px 0;
+    font-size: 14px;
+}
+
+.restaurant a {
+    font-size: 14px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.filter label {
+    margin-right: 10px;
+}
