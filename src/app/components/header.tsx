@@ -6,6 +6,9 @@ const Header = () => {
       <Link href="/" className="hover:underline">
         Home
       </Link>
+      <Link href="/restaurants" className="hover:underline">
+        Restaurants
+      </Link>
     </h2>
   )
 }

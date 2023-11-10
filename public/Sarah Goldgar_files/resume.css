@@ -1,0 +1,261 @@
+body{
+    background-color: #f3eae7;
+    color: #243119;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  main{
+    margin-top: 3em;
+    margin-left: 2em;
+  }
+  
+  i {
+    color: #243119;
+  }
+
+  .fa-2x {
+    margin-left: 0.75em;
+    margin-right: 1em;
+    align-self: center;
+  }
+
+
+  .flex {
+    display: flex;
+  }
+  
+  .left-box{
+    font-size: 18px;
+  }
+  
+  .left-box{
+    float: left;
+    margin: 2em 0;
+    height: 70em;
+    width: 20em;
+    background-color: #E3B505;
+    border: 4px solid #243119;
+  }
+  .right-box{
+    display: inline;
+    height: 60em;
+    width: 45em;
+    margin-top: 2em;
+    margin-left: 1em;
+    float: right;
+    position: absolute;
+  }
+
+  .right-box a {
+    color: #243119;
+    text-decoration: none;
+  }
+
+  .right-box a:hover {
+    text-decoration: underline;
+  }
+  
+  h1{
+    margin: 1.5em 0 1em;
+    text-align: center;
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 900;
+    letter-spacing: .2em;
+  }
+  
+  h3{
+    text-align: center;
+    font-weight: lighter;
+    line-height: .2;
+    font-size: 24px;
+  }
+  
+  .profile, .contact-container, .skills{
+    margin-top: 4em;
+  }
+  
+  /* .experience, .projects, .competencies{
+    margin-top: 2em;
+  } */
+
+  .education {
+    margin-top: 2em;
+  }
+  
+  .left-box h2{
+    text-align: center;
+    margin: 0em 1em 0 1em;
+  }
+  
+  .left-box p {
+    margin: 1em 1em 0 1em;
+  }
+
+  .education i{
+    margin-top: 0.3em;
+    margin-right: -2.75em;
+  }
+
+  .competencies > i {
+    margin-top: 0.3em;
+  }
+  
+  /*CONTACT*/
+  .contact{
+    margin-top: 0.5em;
+  }
+  
+  .contact a{
+    text-decoration: none;
+    color: #243119;
+  }
+  
+  .contact p{
+    margin: 0 0 0 1em;
+    display: inline;
+    color: #243119;
+    text-decoration: none;
+  }
+  
+  .contact p:hover{
+    text-decoration: underline;
+  }
+  
+  /*EXPERIENCE AND SCHOOL SECTION*/
+  .right-box h2{
+    color: #243119;
+    display: inline-block;
+    width: 100%;
+    font-size: 22px;
+  }
+  
+  /*Experience*/
+  
+  
+  .job{
+    padding-bottom: 0.1em;
+    margin-left: 2em;
+    margin-right:2em;
+  }
+  
+  .job p{
+    line-height: 0.2;
+  }
+  
+  .job h4 span{
+    float: right;
+  }
+  
+  .job h4 span, .job ul {
+    margin-right: 4em;
+    margin-left: 1em;
+  }
+
+  .job ul li {
+    margin-top: 0.25em;
+  }
+  
+  /*Skills*/
+  .skills i{
+    margin: 0 1em;
+    display: inline;
+  }
+  
+  .skill-icons{
+    margin-top: 1em;
+    margin-left: 3em;
+  }
+  
+  .inset{
+    margin-left:4em;
+  }
+  
+  .skill-icons i{
+    font-size: 140%;
+    background: 243119;
+    color: #243119;
+    border-radius: 50%;
+    padding: 2%;
+    margin: 0 0.2em;
+  }
+  
+  /*Projects*/
+  .project{
+    flex:2;
+    margin-left:2em;
+  }
+  
+  .project-container{
+    display:flex;
+  }
+  
+  .project a{
+    text-decoration: none;
+    color: #243119;
+  }
+  
+  .project a:hover{
+    text-decoration: underline;
+  }
+  
+  /*Education*/
+  .school{
+    font-weight: bold;
+    margin-left: 3em;
+    margin-right: 6em;
+    margin-top: 1.5em;
+  }
+  
+  .school-descrip{
+    display:inline;
+    font-weight: normal;
+    float: right;
+  }
+
+  /* Competencies */
+  .competencies span {
+    display: flex;
+    align-items: center;
+  }
+
+  .competencies span > i {
+    font-size: 25px;
+    margin-right: 0.2em;
+    margin-left: auto;
+  }
+
+  .competencies .divider {
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+  }
+
+  .competencies > .container {
+    display: flex;
+    margin-top: 1em;
+    margin-left: 3em;
+  }
+
+  .competencies .flex {
+    margin-bottom: 1em;
+  }
+
+  
+  /*Footer*/
+  .resume-tag{
+    margin: 20em 2em 0 2em;
+  }
+  
+  /*Print Button*/
+  .print-button{
+    margin-left: 2em;
+    color: #E0DFE5;
+    text-decoration: none;
+    padding: 4px;
+    background: #243119;
+    border: 1px solid #243119;
+  }
+  
+  .print-button:hover{
+    text-decoration: underline;
+  }
