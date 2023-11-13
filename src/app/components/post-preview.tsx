@@ -16,7 +16,6 @@ const PostPreview = ({
   excerpt,
   slug,
 }: Props) => {
-  console.log(title)
   return (
     <>
       <div className="mb-5">

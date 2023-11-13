@@ -27,13 +27,11 @@ export default function Restaurants() {
 
   }
   const handleUpdateRestaurants =  () => {
-    console.log(activeCategories)
     if(activeCategories.length){
         const newRests = restaurants.filter((restaurant) => {
           const restaurantCategories = restaurant.categories;
           return activeCategories.every(category => restaurantCategories.includes(category))
       })
-      console.log(newRests)
       setActiveRestaurants(newRests)
     } else {
       setActiveRestaurants(restaurants)
@@ -59,6 +57,7 @@ export default function Restaurants() {
             options={categoryOptions}
             className="basic-multi-select"
             classNamePrefix="select"
+            // @ts-ignore
             onChange={(options) => handleUpdateCategories(options)}
           />
         </div>
@@ -67,7 +66,7 @@ export default function Restaurants() {
             <div key={restaurant.name} className={styles.restaurant}>
               <p className={styles.name}>{restaurant.name} - {restaurant.location}</p>
               <div className={styles.restaurantTags}>
-                {restaurant.categories.map((category, i) => <p>{`${category}${i === restaurant.categories.length - 1  ? '' : ','}`}</p>)}
+                {restaurant.categories.map((category, i) => <p key={category + i}>{`${category}${i === restaurant.categories.length - 1  ? '' : ','}`}</p>)}
               </div>
               <a href={restaurant.menu}>{restaurant.menu}</a>
               <div className="h-12"></div>

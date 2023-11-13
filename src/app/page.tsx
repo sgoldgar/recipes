@@ -2,8 +2,8 @@ import { getAllPosts } from "./utils/api";
 import PostPreview from "./components/post-preview";
 
 export default function Home() {
-  const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug", "favorite"]);
-  const favorites = posts.filter(post => post.favorite === true);
+  const posts = getAllPosts(["title", "excerpt", "coverImage", "slug", "favorite"]);
+  const favorites = posts.filter(post => post.favorite);
   return (
     <div className="container home">
       <main>
@@ -16,7 +16,7 @@ export default function Home() {
         <div>
           {favorites.map((post) => (
             <div key={post.title}>
-              <PostPreview {...post} />
+              <PostPreview title={post.title} coverImage={post.coverImage} excerpt={post.excerpt} slug={post.slug} />
             </div>
           ))}
         </div>
