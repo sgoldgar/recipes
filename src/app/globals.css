@@ -121,6 +121,7 @@ a {
   margin-left: 4%;
   padding-left: 1%;
   background: #f8f6f9;
+  z-index: 100;
 }
 
 .header a {
@@ -189,4 +190,14 @@ a {
 
 .post ol li {
   margin-top: 10px;
+}
+
+
+@media only screen and (max-width: 500px){
+  .header {
+      margin-left: 0;
+  }
+  main {
+    padding: 0px 20px;
+  }
 }

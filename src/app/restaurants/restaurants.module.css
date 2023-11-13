@@ -19,12 +19,36 @@
     font-weight: bold;
 }
 
+.filterContainer {
+    display: flex;
+}
+
 .filter {
     display: flex;
     align-items: center;
     margin-bottom: 50px;
+    margin-right: 50px;
 }
 
 .filter label {
     margin-right: 10px;
+}
+
+@media only screen and (max-width: 500px){
+    .filterContainer {
+        flex-direction: column;
+    }
+
+    .filter {
+        margin-bottom: 20px;
+        justify-content: space-between;
+    }
+
+    .restaurant {
+        margin-top: 30px;
+    }
+
+    .restaurantTags {
+        flex-wrap: wrap;
+    }
 }
