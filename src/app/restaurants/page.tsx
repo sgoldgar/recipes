@@ -17,7 +17,6 @@ const categoryOptions = categories.map(category => { return {value: category, la
 export default function Restaurants() {
 
   const [activeCategories, setActiveCategories] = useState([]);
-  const [activeLocations, setActiveLocations] = useState([]);
 
   const [activeRestaurants, setActiveRestaurants] = useState(restaurants)
 
@@ -27,11 +26,15 @@ export default function Restaurants() {
     setActiveCategories(categories.length ? categories : [])
 
   }
-
   const handleUpdateRestaurants =  () => {
+    console.log(activeCategories)
     if(activeCategories.length){
-      const restaurants = activeRestaurants.filter(restaurant=> activeCategories.some(category => restaurant.categories.includes(category)))
-      setActiveRestaurants(restaurants)
+        const newRests = restaurants.filter((restaurant) => {
+          const restaurantCategories = restaurant.categories;
+          return activeCategories.every(category => restaurantCategories.includes(category))
+      })
+      console.log(newRests)
+      setActiveRestaurants(newRests)
     } else {
       setActiveRestaurants(restaurants)
     }
