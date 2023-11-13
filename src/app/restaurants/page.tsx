@@ -11,9 +11,10 @@ const categories = ['drinks', 'fancy', 'weekend', 'tiki drinks', 'beer', 'kid fr
 , 'burgers', 'southern', 'sandwiches', 'american', 'seafood', 'pizza', 'quick/casual', 'italian', 'happy hour food'
 , 'japanese', 'frozen drinks', 'mexican', 'bbq', 'asian', 'french', 'mediterranean', 'thai', 'chinese'
 , 'foodtruck', 'indian', 'vietnamese', 'korean', 'brunch', 'bakery', 'coffeeshop', 'desserts', 'pub food', 'latin american'
-, 'cajun', 'jamaican']
+, 'cajun', 'jamaican'].sort((r1, r2) => (r1 > r2) ? 1 : (r1 < r2) ? -1 : 0);
 
-const locations = ['North', 'Central', 'South 1st/Lamar', 'East Side', 'Downtown', 'West', 'South', 'Cedar Park']
+
+const locations = ['North', 'Central', 'East Side', 'South 1st/Lamar', 'Downtown', 'West', 'South', 'Cedar Park']
 
 const categoryOptions = categories.map(category => { return {value: category, label: category}})
 const locationOptions = locations.map(category => { return {value: category, label: category}})
@@ -68,6 +69,7 @@ export default function Restaurants() {
             <label>Category:</label>
             <Select
               isMulti
+              isClearable={false}
               name="categories"
               options={categoryOptions}
               className="basic-multi-select"
@@ -90,7 +92,7 @@ export default function Restaurants() {
           </div>
         </div>
         <div> 
-          {activeRestaurants.map((restaurant) => (
+          {!activeRestaurants.length ? <p>No restaurants matching criteria were found</p> : activeRestaurants.map((restaurant) => (
             <div key={restaurant.name} className={styles.restaurant}>
               <p className={styles.name}>{restaurant.name} - {restaurant.location}</p>
               <div className={styles.restaurantTags}>
