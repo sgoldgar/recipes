@@ -55,4 +55,34 @@
     .restaurantTags {
         flex-wrap: wrap;
     }
+
+    .restaurantsContainer {
+        border-bottom: 1px solid #eaca47;
+        overflow-y: scroll;
+        height: 51vh;
+        overflow-x: clip;
+    }
+
+    .restaurantsContainer::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    
+    .restaurantsContainer::-webkit-scrollbar:vertical {
+        width: 5px;
+    }
+    
+    .restaurantsContainer::-webkit-scrollbar:horizontal {
+        height: 5px;
+    }
+    
+    .restaurantsContainer ::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: 10px;
+        border: 2px solid #eaca47;
+    }
+    
+    .restaurantsContainer::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: #eaca47;
+    }
 }

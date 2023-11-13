@@ -25,7 +25,7 @@ export default function Restaurants() {
   const [activeCategories, setActiveCategories] = useState([]);
 
   const [activeRestaurants, setActiveRestaurants] = useState(sortedRestaurants);
-  const [activeLocations, setActiveLocations] = useState(locations)
+  const [activeLocations, setActiveLocations] = useState([])
 
 
   const handleUpdateCategories =  async (options: {label: string, value: string}[]) => {
@@ -42,15 +42,22 @@ export default function Restaurants() {
 
 
   const handleUpdateRestaurants =  () => {
-    const filterCategory = sortedRestaurants.filter((restaurant) => {
+    let restaurants = sortedRestaurants;
+    if(activeCategories.length){
+      const filterCategory = restaurants.filter((restaurant) => {
         const restaurantCategories = restaurant.categories;
         return activeCategories.every(category => restaurantCategories.includes(category))
-    })
-    const filterLocation = filterCategory.filter((restaurant) => {
-      return activeLocations.includes(restaurant.location)
-  })
-    setActiveRestaurants(filterLocation)
-    
+      })
+      restaurants = filterCategory
+    }
+    if(activeLocations.length){
+      const filterLocation = restaurants.filter((restaurant) => {
+        // @ts-ignore 
+        return activeLocations.includes(restaurant.location)
+       })
+       restaurants = filterLocation
+    }
+    setActiveRestaurants(restaurants)
   }
 
   useEffect(() => {
@@ -91,7 +98,7 @@ export default function Restaurants() {
             />
           </div>
         </div>
-        <div> 
+        <div className={styles.restaurantsContainer}> 
           {!activeRestaurants.length ? <p>No restaurants matching criteria were found</p> : activeRestaurants.map((restaurant) => (
             <div key={restaurant.name} className={styles.restaurant}>
               <p className={styles.name}>{restaurant.name} - {restaurant.location}</p>
