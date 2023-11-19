@@ -1,5 +1,5 @@
 .restaurant {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .restaurantTags {
@@ -8,16 +8,17 @@
 
 .restaurantTags p {
     margin: 5px 5px 5px 0;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .restaurant a {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .name, .happyHourName {
     font-weight: bold;
     text-decoration: underline;
+    font-size: 18px;
 }
 
 .happyHourName {
@@ -56,6 +57,8 @@
 @media only screen and (max-width: 500px){
     .filterContainer {
         flex-direction: column;
+        margin-top: 20px;
+        border-bottom: 1px solid black;
     }
 
     .filter {
@@ -68,7 +71,7 @@
     }
 
     .restaurant {
-        margin-top: 30px;
+        margin-top: 40px;
     }
 
     .restaurantTags {
@@ -78,30 +81,7 @@
     .restaurantsContainer {
         border-bottom: 1px solid #eaca47;
         overflow-y: scroll;
-        height: 51vh;
+        height: 65vh;
         overflow-x: clip;
-    }
-
-    .restaurantsContainer::-webkit-scrollbar {
-        -webkit-appearance: none;
-    }
-    
-    .restaurantsContainer::-webkit-scrollbar:vertical {
-        width: 5px;
-    }
-    
-    .restaurantsContainer::-webkit-scrollbar:horizontal {
-        height: 5px;
-    }
-    
-    .restaurantsContainer ::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, .5);
-        border-radius: 10px;
-        border: 2px solid #eaca47;
-    }
-    
-    .restaurantsContainer::-webkit-scrollbar-track {
-        border-radius: 10px;
-        background-color: #eaca47;
     }
 }

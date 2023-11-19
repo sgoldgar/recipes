@@ -76,22 +76,26 @@ export default function HappyHours() {
                 <div className="space-y-4">
                     <h1 className="text-center text-5xl">Happy Hours</h1>
                 </div>
-                <div className={styles.filter}>
-                    <label>Location:</label>
-                    <Select
-                        isClearable={false}
-                        isMulti
-                        name="locations"
-                        options={locationOptions}
-                        className="basic-multi-select"
-                        classNamePrefix="select"
-                        // @ts-ignore
-                        onChange={(options) => handleUpdateLocations(options)}
-                    />
+                <div className={styles.filterContainer}>
+                    <div className={styles.filter}>
+                        <label>Location:</label>
+                        <Select
+                            isClearable={false}
+                            isMulti
+                            name="locations"
+                            options={locationOptions}
+                            className="basic-multi-select"
+                            classNamePrefix="select"
+                            // @ts-ignore
+                            onChange={(options) =>
+                                handleUpdateLocations(options)
+                            }
+                        />
+                    </div>
+                    <h2 className={styles.day}>{activeDay.day}</h2>
                 </div>
 
                 <div className={styles.restaurantsContainer}>
-                    <h2 className={styles.day}>{activeDay.day}</h2>
                     {activeDay.specials.map((restaurant: any) => (
                         <div
                             key={restaurant.name}

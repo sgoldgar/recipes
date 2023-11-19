@@ -187,6 +187,13 @@ const happyHours: {
             time: "430-530",
             link: 'https://thebackspacepizza.com/wp-content/uploads/Anderson-Lane-edit.pdf'
         },
+        {
+            name: "The Cavalier",
+            location: "East Side",
+            special: "$3 well drinks, $7 frozen drinks",
+            time: "3-7",
+            link: 'https://www.thecavalieratx.com/#df381762e95346209a5da6231a2abc0a'
+        },
     ],
     tuesday: [
         {
@@ -378,6 +385,13 @@ const happyHours: {
             time: "9pm to close",
             link: 'https://www.cmwbrewery.com/menu'
         },
+        {
+            name: "The Cavalier",
+            location: "East Side",
+            special: "$3 well drinks, $7 frozen drinks",
+            time: "3-7",
+            link: 'https://www.thecavalieratx.com/#df381762e95346209a5da6231a2abc0a'
+        },
     ],
     wednesday: [
         {
@@ -562,6 +576,13 @@ const happyHours: {
             special: "$5 pints and pretzels, $15 pitchers and cheese/pepperoni pizza",
             time: "9pm to close",
             link: 'https://www.cmwbrewery.com/menu'
+        },
+        {
+            name: "The Cavalier",
+            location: "East Side",
+            special: "$3 well drinks, $7 frozen drinks",
+            time: "3-7",
+            link: 'https://www.thecavalieratx.com/#df381762e95346209a5da6231a2abc0a'
         },
     ],
     thursday: [
@@ -762,6 +783,13 @@ const happyHours: {
             time: "9pm to close",
             link: 'https://www.cmwbrewery.com/menu'
         },
+        {
+            name: "The Cavalier",
+            location: "East Side",
+            special: "$3 well drinks, $7 frozen drinks",
+            time: "3-7",
+            link: 'https://www.thecavalieratx.com/#df381762e95346209a5da6231a2abc0a'
+        },
     ],
     friday: [
         {
@@ -940,6 +968,13 @@ const happyHours: {
             time: "430-530",
             link: 'https://thebackspacepizza.com/wp-content/uploads/Anderson-Lane-edit.pdf'
         },
+        {
+            name: "The Cavalier",
+            location: "East Side",
+            special: "$3 well drinks, $7 frozen drinks",
+            time: "3-7",
+            link: 'https://www.thecavalieratx.com/#df381762e95346209a5da6231a2abc0a'
+        },
     ],
     saturday: [
         {
@@ -1019,6 +1054,13 @@ const happyHours: {
             special: "1/2 off house cocktails, beer, wine, antipasti",
             time: "4-6",
             link: 'https://thebackspacepizza.com/wp-content/uploads/Anderson-Lane-edit.pdf'
+        },
+        {
+            name: "The Cavalier",
+            location: "East Side",
+            special: "$3 well drinks, $7 frozen drinks",
+            time: "7-10",
+            link: 'https://www.thecavalieratx.com/#df381762e95346209a5da6231a2abc0a'
         },
     ],
     sunday: [
@@ -1106,6 +1148,13 @@ const happyHours: {
             special: "1/2 off house cocktails, beer, wine, antipasti",
             time: "4-6",
             link: 'https://thebackspacepizza.com/wp-content/uploads/Anderson-Lane-edit.pdf'
+        },
+        {
+            name: "The Cavalier",
+            location: "East Side",
+            special: "$3 well drinks, $7 frozen drinks",
+            time: "7-10",
+            link: 'https://www.thecavalieratx.com/#df381762e95346209a5da6231a2abc0a'
         },
     ],
 };

@@ -221,6 +221,10 @@ const restaurants: Restaurant[] = [
     {name: "Cypress Grill", categories: ['cajun'], location: 'South', menu: 'https://cypressgrill.net'},
     {name: "Mattie's", categories: ['fancy', 'american'], location: 'South 1st/Lamar', menu: 'https://mattiesaustin.com/'},
     {name: "Swift's Attic", categories: ['fancy', 'american', 'vegan friendly'], location: 'Downtown', menu: 'https://swiftsattic.com/menu/'},
+    {name: "Cavalier", categories: ['drinks', 'brunch', 'dog friendly', 'patio', 'cajun'], location: 'East Side', menu: 'https://www.thecavalieratx.com/'},
+    {name: "Hi Hat", categories: ['american', 'drinks', 'brunch'], location: 'East Side', menu: 'https://www.hihatpublichouse.com/food'},
+    {name: "Peace Bakery", categories: ['mediterranean'], location: 'North', menu: 'https://peacebakerydeliaustin.com/austin-peace-bakery-food-menu'},
+    {name: "Usta Kababgy", categories: ['mediterranean'], location: 'North', menu: 'https://www.ustakababgy.com/'},
 
     // {name: "", categories: [], location: '', menu: ''},
 
