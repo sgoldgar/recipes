@@ -86,8 +86,8 @@ export default function HappyHours() {
                             options={locationOptions}
                             className="basic-multi-select"
                             classNamePrefix="select"
-                            // @ts-ignore
                             onChange={(options) =>
+                                // @ts-ignore
                                 handleUpdateLocations(options)
                             }
                         />
