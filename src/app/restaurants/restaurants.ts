@@ -225,6 +225,8 @@ const restaurants: Restaurant[] = [
     {name: "Hi Hat", categories: ['american', 'drinks', 'brunch'], location: 'East Side', menu: 'https://www.hihatpublichouse.com/food'},
     {name: "Peace Bakery", categories: ['mediterranean'], location: 'North', menu: 'https://peacebakerydeliaustin.com/austin-peace-bakery-food-menu'},
     {name: "Usta Kababgy", categories: ['mediterranean'], location: 'North', menu: 'https://www.ustakababgy.com/'},
+    {name: "Hadramout", categories: ['mediterranean'], location: 'Central', menu: 'https://hadramoutresturant.com/appetizer/'},
+    {name: "Uncle Tetsu", categories: ['desserts'], location: 'Central', menu: 'https://uncletetsu-us.com/index.php/our-menu'},
 
     // {name: "", categories: [], location: '', menu: ''},
 
