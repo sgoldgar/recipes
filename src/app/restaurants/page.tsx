@@ -63,10 +63,16 @@ const locationOptions = locations.map((category) => {
     return { value: category, label: category };
 });
 
+const isLocal = window.location.host.includes("localhost");
+
 export default function Restaurants() {
     const getRestaurants = async () =>
         await fetch(
-            "http://localhost:8888/.netlify/functions/get_restaurants",
+            `${
+                isLocal
+                    ? "http://localhost:8888"
+                    : "https://magical-puppy-74b22c.netlify.app"
+            }/.netlify/functions/get_restaurants`,
         ).then(
             // @ts-ignore
             async (response: any) => {
