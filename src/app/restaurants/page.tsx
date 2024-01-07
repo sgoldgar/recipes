@@ -1,12 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import restaurants from "./restaurants";
+import Restaurant from "./restaurants";
 import styles from "./restaurants.module.css";
 import Select from "react-select";
-
-const sortedRestaurants = restaurants.sort((r1, r2) =>
-    r1.name > r2.name ? 1 : r1.name < r2.name ? -1 : 0,
-);
 
 const categories = [
     "drinks",
@@ -68,10 +64,30 @@ const locationOptions = locations.map((category) => {
 });
 
 export default function Restaurants() {
+    const getRestaurants = async () =>
+        await fetch(
+            "http://localhost:8888/.netlify/functions/get_restaurants",
+        ).then(
+            // @ts-ignore
+            async (response: any) => {
+                const res = await response.json();
+                const restaurants = res.sort((r1: any, r2: any) =>
+                    r1.name > r2.name ? 1 : r1.name < r2.name ? -1 : 0,
+                );
+                setRestaurants(restaurants);
+                setActiveRestaurants(restaurants);
+            },
+        );
+
+    useEffect(() => {
+        getRestaurants();
+    }, []);
+
+    const [restaurants, setRestaurants] = useState([]);
+
     const [activeCategories, setActiveCategories] = useState([]);
 
-    const [activeRestaurants, setActiveRestaurants] =
-        useState(sortedRestaurants);
+    const [activeRestaurants, setActiveRestaurants] = useState([]);
     const [activeLocations, setActiveLocations] = useState([]);
 
     const handleUpdateCategories = async (
@@ -91,24 +107,24 @@ export default function Restaurants() {
     };
 
     const handleUpdateRestaurants = () => {
-        let restaurants = sortedRestaurants;
         if (activeCategories.length) {
-            const filterCategory = restaurants.filter((restaurant) => {
+            console.log("restaurants", restaurants);
+            const filterCategory = activeRestaurants.filter((restaurant) => {
                 const restaurantCategories = restaurant.categories;
                 return activeCategories.every((category) =>
                     restaurantCategories.includes(category),
                 );
             });
-            restaurants = filterCategory;
+            setActiveRestaurants(filterCategory);
         }
         if (activeLocations.length) {
-            const filterLocation = restaurants.filter((restaurant) => {
+            const filterLocation = activeRestaurants.filter((restaurant) => {
                 // @ts-ignore
                 return activeLocations.includes(restaurant.location);
             });
-            restaurants = filterLocation;
+            setActiveRestaurants(filterLocation);
         }
-        setActiveRestaurants(restaurants);
+        // setActiveRestaurants(restaurants);
     };
 
     useEffect(() => {

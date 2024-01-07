@@ -227,9 +227,6 @@ const restaurants: Restaurant[] = [
     {name: "Usta Kababgy", categories: ['mediterranean'], location: 'North', menu: 'https://www.ustakababgy.com/'},
     {name: "Hadramout", categories: ['mediterranean'], location: 'Central', menu: 'https://hadramoutresturant.com/appetizer/'},
     {name: "Uncle Tetsu", categories: ['desserts'], location: 'Central', menu: 'https://uncletetsu-us.com/index.php/our-menu'},
-
-    // {name: "", categories: [], location: '', menu: ''},
-
 ]
 
 export default restaurants
