@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import Restaurant from "./restaurants";
+import RestaurantList from "./restaurants";
 import styles from "./restaurants.module.css";
 import Select from "react-select";
 
@@ -63,37 +63,38 @@ const locationOptions = locations.map((category) => {
     return { value: category, label: category };
 });
 
-const isLocal = window.location.host.includes("localhost");
+// const isLocal = window?.location.host.includes("localhost");
 
 export default function Restaurants() {
-    const getRestaurants = async () =>
-        await fetch(
-            `${
-                isLocal
-                    ? "http://localhost:8888"
-                    : "https://magical-puppy-74b22c.netlify.app"
-            }/.netlify/functions/get_restaurants`,
-        ).then(
-            // @ts-ignore
-            async (response: any) => {
-                const res = await response.json();
-                const restaurants = res.sort((r1: any, r2: any) =>
-                    r1.name > r2.name ? 1 : r1.name < r2.name ? -1 : 0,
-                );
-                setRestaurants(restaurants);
-                setActiveRestaurants(restaurants);
-            },
-        );
+    // DB
+    // const getRestaurants = async () =>
+    //     await fetch(
+    //         `${
+    //             isLocal
+    //                 ? "http://localhost:8888"
+    //                 : "https://magical-puppy-74b22c.netlify.app"
+    //         }/.netlify/functions/get_restaurants`,
+    //     ).then(
+    //         // @ts-ignore
+    //         async (response: any) => {
+    //             const res = await response.json();
+    //             const restaurants = res.sort((r1: any, r2: any) =>
+    //                 r1.name > r2.name ? 1 : r1.name < r2.name ? -1 : 0,
+    //             );
+    //             setRestaurants(restaurants);
+    //             setActiveRestaurants(restaurants);
+    //         },
+    //     );
 
-    useEffect(() => {
-        getRestaurants();
-    }, []);
+    // useEffect(() => {
+    //     getRestaurants();
+    // }, []);
 
-    const [restaurants, setRestaurants] = useState([]);
+    const [restaurants, setRestaurants] = useState(RestaurantList);
 
     const [activeCategories, setActiveCategories] = useState([]);
 
-    const [activeRestaurants, setActiveRestaurants] = useState([]);
+    const [activeRestaurants, setActiveRestaurants] = useState(RestaurantList);
     const [activeLocations, setActiveLocations] = useState([]);
 
     const handleUpdateCategories = async (
