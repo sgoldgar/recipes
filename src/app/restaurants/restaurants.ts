@@ -9,7 +9,7 @@ type Category = 'drinks' | 'fancy' | 'weekend' | 'tiki drinks' | 'beer' | 'kid f
 | 'burgers' | 'southern' | 'sandwiches' | 'american' | 'seafood' | 'pizza' | 'quick/casual' | 'italian' | 'happy hour food'
 | 'japanese' | 'frozen drinks' | 'mexican' | 'bbq' | 'asian' | 'french' | 'mediterranean' | 'thai' | 'chinese'
 | 'foodtruck' | 'indian' | 'vietnamese' | 'korean' | 'brunch' | 'bakery' | 'coffeeshop' | 'desserts' | 'pub food' | 'latin american'
-| 'cajun' | 'jamaican' | 'bagels' | 'vegan friendly'
+| 'cajun' | 'jamaican' | 'bagels' | 'vegan friendly' 
 
 type Location = 'North' | 'Central' | 'South 1st/Lamar' | 'East Side' | 'Downtown' | 'West' | 'South' | 'Cedar Park';
 
@@ -214,8 +214,8 @@ const restaurants: Restaurant[] = [
     {name: "Rosen's Bagels", categories: ['brunch', 'bagels'], location: 'North', menu: 'https://www.rosensbagels.com/'},
     {name: "Nervous Charlie's", categories: ['brunch', 'bagels'], location: 'Central', menu: 'https://www.nervouscharlies.com/'},
     {name: "Tiny Minotaur", categories: ['drinks', 'weekend'], location: 'East Side', menu: 'https://www.tinyminotaur.com/participation'},
-    {name: "The Rose Bakery (not open yet)", categories: ['bakery', 'desserts'], location: 'North', menu: 'https://www.instagram.com/therosebakeryatx/'},
-    {name: "Lazeez (open Dec)", categories: ['mediterranean', 'quick/casual'], location: 'North', menu: 'https://www.lazeezaustin.com'},
+    {name: "The Rose Bakery", categories: ['bakery', 'desserts'], location: 'North', menu: 'https://www.instagram.com/therosebakeryatx/'},
+    {name: "Lazeez", categories: ['mediterranean', 'quick/casual'], location: 'North', menu: 'https://www.lazeezaustin.com'},
     {name: "Asados Mission Style Burritos", categories: ['mexican', 'foodtruck'], location: 'Central', menu: 'https://www.asadostaqueria.com'},
     {name: "Taco Palenque", categories: ['mexican', 'quick/casual'], location: 'North', menu: 'https://tacopalenque.com'},
     {name: "Cypress Grill", categories: ['cajun'], location: 'South', menu: 'https://cypressgrill.net'},
@@ -227,6 +227,32 @@ const restaurants: Restaurant[] = [
     {name: "Usta Kababgy", categories: ['mediterranean'], location: 'North', menu: 'https://www.ustakababgy.com/'},
     {name: "Hadramout", categories: ['mediterranean'], location: 'Central', menu: 'https://hadramoutresturant.com/appetizer/'},
     {name: "Uncle Tetsu", categories: ['desserts'], location: 'Central', menu: 'https://uncletetsu-us.com/index.php/our-menu'},
+    {name: "Redbud Icehouse", categories: ['american', 'patio', 'dog friendly', 'drinks'], location: 'Central', menu: 'https://www.redbudicehouse.com/#food'},
+    {name: "Bep Saigon", categories: ['vietnamese', 'asian'], location: 'North', menu: 'https://mybepsaigon.com/menu'},
+    {name: "Laod Bar", categories: ['drinks', 'asian'], location: 'East Side', menu: 'https://www.laodbar.com/eat-1'},
+    {name: "Inka Chicken", categories: ['quick/casual'], location: 'North', menu: 'https://inka-chicken.com/menu'},
+    {name: "The Fika", categories: ['desserts', 'bakery'], location: 'North', menu: 'https://www.thefikatable.com/order-online'},
+    {name: "The Golden Horn", categories: ['drinks'], location: 'Central', menu: 'https://www.instagram.com/the.golden.horn.atx/'},
+    {name: "Yellow Ranger", categories: ['asian', 'drinks'], location: 'Central', menu: 'https://www.yellowrangeratx.com'},
+    {name: "Casa Bianca", categories: ['italian', 'fancy'], location: 'East Side', menu: 'https://www.casabiancaatx.com'},
+    {name: "Dumpling World", categories: ['asian'], location: 'Central', menu: 'https://www.dumplingworldtx.com'},
+    {name: "Palm Pizza", categories: ['pizza', 'fancy'], location: 'East Side', menu: 'https://www.palm.pizza'},
+    {name: "Red Farm", categories: ['asian', 'fancy', 'chinese'], location: 'Downtown', menu: 'https://www.redfarmnyc.com/location/austin/'},
+    {name: "Dog Day Coffee", categories: ['coffeeshop'], location: 'North', menu: 'https://www.dogdaynitro.com/menu'},
+    {name: "Mikado Ryotei", categories: ['asian', 'japanese', 'fancy'], location: 'North', menu: 'https://www.mikadoaustin.com/japanese-food-menu'},
+    {name: "New Fortune", categories: ['asian', 'chinese', 'brunch'], location: 'North', menu: 'https://www.newfortune2.com/menu'},
+    {name: "Phoebe's Diner", categories: ['brunch', 'weekend'], location: 'North', menu: 'https://www.phoebesdiner.com/menu-at-phoebes-garcyfarms'},
+    {name: "Teal House", categories: ['coffeeshop', 'bakery', 'weekend'], location: 'South', menu: 'https://www.tealhouse.co/_files/ugd/d034f5_f050bb25a42d4d1888ff161172129449.pdf'},
+    {name: "Mums Foods", categories: ['bbq'], location: 'East Side', menu: 'https://static1.squarespace.com/static/6105c7164fcfc237671c8f40/t/6392a413968b643b5ee41dd4/1670554643458/MUM_FOOD_MENUS_2022_1129.pdf'},
+    {name: "Dang Hot 89", categories: ['foodtruck', 'american'], location: 'North', menu: 'https://howdy-89-llc.square.site'},
+    {name: "Golden Hour", categories: ['drinks', 'patio', 'brunch', 'weekend'], location: 'South', menu: 'https://www.goldenhouratx.com/menus'},
+    {name: "Lovebirds", categories: ['drinks', 'patio', 'dog friendly'], location: 'East Side', menu: 'https://www.heylovebirds.com/menu'},
+    {name: "Toasty Badger", categories: ['brunch', 'weekend'], location: 'South', menu: 'https://www.loboshospitality.com/toastybadger'},
+    {name: "KPOT Korean BBQ & Hot Pot", categories: ['korean', 'asian'], location: 'South', menu: 'https://thekpot.com/menu/'},
+    {name: "Special Noodle", categories: ['chinese', 'asian'], location: 'North', menu: 'https://onlineorder.bestfood.today/Restaurant/details/MTAwMzg='},
+    {name: "Suzi's", categories: ['chinese', 'asian'], location: 'Central', menu: 'https://www.suzischinese.com/menu'},
+    {name: "KPOT Korean BBQ & Hot Pot", categories: ['korean'], location: 'South', menu: 'https://thekpot.com/menu/'},
+
 ]
 
 export default restaurants
